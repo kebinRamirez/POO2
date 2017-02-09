@@ -5,10 +5,28 @@
  */
 package universidad;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Administrador
  */
 public class Estudiante {
+    int ide;
+    String nombre;ArrayList<infornacionCurso> infoCurso;
+    ArrayList<Curso> cursos;
     
+    public Estudiante(int ide){
+        this.ide=ide;
+        cursos = new ArrayList();
+    }
+    
+    public boolean agregarCurso(Curso curso){
+        if (cursos.size() < 5){
+            cursos.add(curso);
+            return true;
+        }
+        return false;
+    }
+   
 }
